@@ -1,7 +1,7 @@
 // app.js
 
 // Initialize the map and set its view
-var map = L.map("map").setView([40.7128, -74.006], 13); // Coordinates for New York City
+var map = L.map("map").setView([0.91667, 104.45], 13); // Coordinates for New York City
 
 // Add a tile layer (map background) to the map
 L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
