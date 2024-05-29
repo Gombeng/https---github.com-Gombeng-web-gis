@@ -18,161 +18,12 @@
         box-sizing: border-box;
       }
       #map {
-        height: 95vh;
-      }
-      .leaflet-popup-content {
-        margin: 1rem;
-      }
-      .spot-image {
-        width: 100%;
-        height: auto;
+        height: 100vh;
       }
     </style>
   </head>
   <body>
-    <div class="container-fluid">
-      <div class="row m-3">
-        <div class="col-md-3">
-          <div class="mb-3 d-flex gap-2">
-            <input
-              id="place-input"
-              type="text"
-              class="form-control"
-              placeholder="Search for a place"
-            />
-            <button class="btn btn-primary" onclick="searchPlace()">
-              Search
-            </button>
-          </div>
-
-          <div class="accordion mb-3" id="accordionMenu">
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="headingTanjungpinang">
-                <button
-                  class="accordion-button"
-                  type="button"
-                  data-bs-toggle="collapse"
-                  data-bs-target="#collapseTanjungpinang"
-                  aria-expanded="true"
-                  aria-controls="collapseTanjungpinang"
-                >
-                  Tanjungpinang
-                </button>
-              </h2>
-              <div
-                id="collapseTanjungpinang"
-                class="accordion-collapse collapse show"
-                aria-labelledby="headingTanjungpinang"
-                data-bs-parent="#accordionMenu"
-              >
-                <div class="accordion-body">
-                  <ul class="list-group">
-                    <li
-                      class="list-group-item menu-item"
-                      data-location="tanjungpinang"
-                      data-spot="Tanjung Siambang"
-                    >
-                      Tanjung Siambang
-                    </li>
-                    <li
-                      class="list-group-item menu-item"
-                      data-location="tanjungpinang"
-                      data-spot="Pulau Penyengat"
-                    >
-                      Pulau Penyengat
-                    </li>
-                    <li
-                      class="list-group-item menu-item"
-                      data-location="tanjungpinang"
-                      data-spot="Tugu Pensil"
-                    >
-                      Tugu Pensil
-                    </li>
-                    <li
-                      class="list-group-item menu-item"
-                      data-location="tanjungpinang"
-                      data-spot="Laman Boenda"
-                    >
-                      Laman Boenda
-                    </li>
-                    <li
-                      class="list-group-item menu-item"
-                      data-location="tanjungpinang"
-                      data-spot="Museum Sultan Sulaiman Badrul Alamsyah"
-                    >
-                      Museum Sultan Sulaiman Badrul Alamsyah
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="headingBatam">
-                <button
-                  class="accordion-button collapsed"
-                  type="button"
-                  data-bs-toggle="collapse"
-                  data-bs-target="#collapseBatam"
-                  aria-expanded="false"
-                  aria-controls="collapseBatam"
-                >
-                  Batam
-                </button>
-              </h2>
-              <div
-                id="collapseBatam"
-                class="accordion-collapse collapse"
-                aria-labelledby="headingBatam"
-                data-bs-parent="#accordionMenu"
-              >
-                <div class="accordion-body">
-                  <ul class="list-group">
-                    <li
-                      class="list-group-item menu-item"
-                      data-location="batam"
-                      data-spot="Barelang Bridge"
-                    >
-                      Barelang Bridge
-                    </li>
-                    <li
-                      class="list-group-item menu-item"
-                      data-location="batam"
-                      data-spot="Nagoya Hill Shopping Mall"
-                    >
-                      Nagoya Hill Shopping Mall
-                    </li>
-                    <li
-                      class="list-group-item menu-item"
-                      data-location="batam"
-                      data-spot="Maha Vihara Duta Maitreya Temple"
-                    >
-                      Maha Vihara Duta Maitreya Temple
-                    </li>
-                    <li
-                      class="list-group-item menu-item"
-                      data-location="batam"
-                      data-spot="Ocarina Park"
-                    >
-                      Ocarina Park
-                    </li>
-                    <li
-                      class="list-group-item menu-item"
-                      data-location="batam"
-                      data-spot="Batam Miniature Park"
-                    >
-                      Batam Miniature Park
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-9">
-          <div id="map"></div>
-        </div>
-      </div>
-    </div>
+    <div id="map"></div>
 
     <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -183,6 +34,9 @@
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
+
+    <script src="./touristData.js"></script>
+    <script src="./drugsData.js"></script>
     <script src="./app.js"></script>
   </body>
 </html>
